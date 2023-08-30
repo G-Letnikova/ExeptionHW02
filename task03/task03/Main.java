@@ -2,7 +2,7 @@ package task03;
 
 import java.util.Scanner;
 
-public class CheckingThreeNumbers {
+public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Введите первое число: ");
@@ -11,21 +11,10 @@ public class CheckingThreeNumbers {
         int num2 = scanner.nextInt();
         System.out.print("Введите третье число: ");
         int num3 = scanner.nextInt();
+        CheckingThreeNumbers checkingThreeNumbers = new CheckingThreeNumbers();
 
         try {
-            if (num1 > 100 ) {
-                throw new NumberOutOfRangeException("Первое число вне допустимого диапазона");
-                } 
-            if (num2 < 0) {
-                throw new NumberOutOfRangeException("Второе число вне допустимого диапазона");
-                }
-            if (num1 + num2 < 10) {
-                throw new NumberSumException("Сумма первого и второго чисел слишком мала");
-            }
-            if (num3 == 0) {
-                throw new DivisionByZeroException("Деление на 0 недопустимо");
-                }
-            System.out.println("Ппроверка пройдена успешно");
+            System.out.println(checkingThreeNumbers.check(num1,num2,num3));
         } catch (NumberOutOfRangeException e) {
             System.out.println(e.getMessage());
         } catch (NumberSumException e) {
@@ -36,6 +25,5 @@ public class CheckingThreeNumbers {
 
         scanner.close();
     }
-    
     
 }
