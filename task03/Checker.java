@@ -1,7 +1,7 @@
 package task03;
 
-public class CheckingThreeNumbers {
-    public String check (int num1, int num2, int num3) throws NumberOutOfRangeException, NumberSumException, DivisionByZeroException {
+public class Checker {
+    public String check3Num (int num1, int num2, int num3) throws NumberOutOfRangeException, NumberSumException, DivisionByZeroException {
          if (num1 > 100 ) {
                 throw new NumberOutOfRangeException("Первое число вне допустимого диапазона");
                 } 

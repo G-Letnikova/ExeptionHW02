@@ -11,10 +11,10 @@ public class Main {
         int num2 = scanner.nextInt();
         System.out.print("Введите третье число: ");
         int num3 = scanner.nextInt();
-        CheckingThreeNumbers checkingThreeNumbers = new CheckingThreeNumbers();
+        Checker checker = new Checker();
 
         try {
-            System.out.println(checkingThreeNumbers.check(num1,num2,num3));
+            System.out.println(checker.check3Num(num1,num2,num3));
         } catch (NumberOutOfRangeException e) {
             System.out.println(e.getMessage());
         } catch (NumberSumException e) {
