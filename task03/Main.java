@@ -15,14 +15,11 @@ public class Main {
 
         try {
             System.out.println(checker.check3Num(num1,num2,num3));
-        } catch (NumberOutOfRangeException e) {
-            System.out.println(e.getMessage());
-        } catch (NumberSumException e) {
-            System.out.println(e.getMessage());
-        } catch (DivisionByZeroException e) {
+
+        } catch (NumberOutOfRangeException | NumberSumException | DivisionByZeroException e) {
             System.out.println(e.getMessage());
         }
-
+        
         scanner.close();
     }
     
